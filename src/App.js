@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import Hello from './Hello'
+import Test from './Test'
+import EnhancedBorder from './HOC/ApplyBorder'
+import ClickCounter from './ClickCounter'
+import HoverCounter from './HoverCounter';
+import HocCounter from './HOC/HocCounter'
+
+const UpdatedClickCounter = HocCounter(ClickCounter)
+const UpdatedHoverCounter = HocCounter(HoverCounter)
 
 function App() {
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+  Lets code tamil <br />
+  <UpdatedClickCounter name="Aravind"/>
+  <UpdatedHoverCounter name="swamy"/>
+
     </div>
   );
 }
